@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoticiasController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,3 +31,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+Route::middleware('auth')->group(function(){
+	Route::resource('noticias', NoticiasController::class);
+});
