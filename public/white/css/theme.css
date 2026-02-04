@@ -61,3 +61,89 @@
   max-width: 530px;
   margin: 0 auto;
 }
+
+
+
+/* ===============================
+   TEMA PORTAL DE NOTÍCIAS
+   =============================== */
+
+/* Fundo geral */
+body {
+    background-color: #f8fafc !important;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #1e293b !important;
+}
+
+.sidebar .logo a {
+    color: #ffffff !important;
+}
+
+.sidebar .nav li a {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+}
+
+.sidebar .nav li a:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+/* Item ativo */
+.sidebar .nav li.active > a {
+    background: #2563eb !important;
+    color: #ffffff !important;
+}
+
+/* Botões principais */
+.btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Botão Nova Notícia */
+.btn-info {
+    background-color: #0ea5e9 !important;
+    border-color: #0ea5e9 !important;
+}
+
+/* Badges */
+.badge-success {
+    background-color: #16a34a !important;
+}
+
+.badge-secondary {
+    background-color: #64748b !important;
+}
+
+/* Remove rosa global */
+.bg-primary {
+    background-color: #2563eb !important;
+}
+
+.text-primary {
+    color: #2563eb !important;
+}
+
+
+/* Remove linha rosa do topo */
+.main-panel:before {
+    background: #2563eb !important; /* ou transparente */
+}
+
+/* Remove cores dos botões */
+.btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8 !important;
+}

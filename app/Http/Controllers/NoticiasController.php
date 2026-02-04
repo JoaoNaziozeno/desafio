@@ -5,15 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Noticia;
 use App\Models\Noticias;
-use PhpParser\Node\Expr\New_;
 
 class NoticiasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index(Request $request)
     {
         $query = Noticias::where('user_id', Auth::id());
@@ -27,17 +23,15 @@ class NoticiasController extends Controller
         return view('noticias.index', compact('noticias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
-        //
+        return view('noticias.create',[
+            'class' => 'white-content',
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -56,17 +50,13 @@ class NoticiasController extends Controller
         ->with('success', 'Notícia criada com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(Noticias $noticia)
     {
         return view('noticias.index', compact('noticia'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(Noticias $noticias)
     {
         $this->authorize('update', $noticias);
@@ -74,15 +64,13 @@ class NoticiasController extends Controller
         return view('noticias.edit', compact('noticias'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, Noticias $noticias)
     {
         $this->authorize('update', $noticias);
 
         $request->validate([
-            'title' => 'required|String|max255',
+            'title' => 'required|string|max255',
             'content' => 'required|string',
         ]);
 
@@ -91,9 +79,7 @@ class NoticiasController extends Controller
             ->with('success', 'Notícia atualizada com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(Noticias $noticias)
     {
         $this->authorize('delete', $noticias);
