@@ -133,12 +133,24 @@ body {
 }
 
 
-/* Remove linha rosa do topo */
-.main-panel:before {
-    background: #2563eb !important; /* ou transparente */
+/* Botão Editar (btn-sm + btn-primary) */
+.btn-sm.btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
 }
 
-/* Remove cores dos botões */
+.btn-sm.btn-primary:hover {
+    background-color: #1d4ed8 !important;
+}
+
+
+/* Remove linha rosa do topo 
+.main-panel:before {
+    background: #2563eb !important;
+}
+
+/* Remove cores dos botões
 .btn-primary {
     background-color: #2563eb !important;
     border-color: #2563eb !important;
@@ -147,3 +159,13 @@ body {
 .btn-primary:hover {
     background-color: #1d4ed8 !important;
 }
+
+.btn-warning {
+    background-color: #0ea5e9 !important;
+    border-color: #0ea5e9 !important;
+    color: #fff !important;
+}
+
+.btn-warning:hover {
+    background-color: #0284c7 !important;
+} */

@@ -2,30 +2,20 @@
     <div class="container-fluid">
         <ul class="nav">
             <li class="nav-item">
-                <a href="https://creative-tim.com" target="blank" class="nav-link">
-                    {{ _('Creative Tim') }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://updivision.com" target="blank" class="nav-link">
-                    {{ _('Updivision') }}
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="#" class="nav-link">
-                    {{ _('About Us') }}
+                    {{ _('Sobre nós') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    {{ _('Blog') }}
+                <a href="https://github.com/JoaoNaziozeno" target="_blank" class="nav-link">
+                    {{ _('GitHub') }}
                 </a>
             </li>
         </ul>
         <div class="copyright">
-            &copy; {{ now()->year }} {{ _('made with') }} <i class="tim-icons icon-heart-2"></i> {{ _('by') }}
-            <a href="https://creative-tim.com" target="_blank">{{ _('Creative Tim') }}</a> &amp;
-            <a href="https://updivision.com" target="_blank">{{ _('Updivision') }}</a> {{ _('for a better web') }}.
+            &copy; {{ now()->year }} {{ _('feito com ') }} <i class="tim-icons icon-heart-2"></i> {{ _(' por') }}
+            <a href="https://github.com/JoaoNaziozeno" target="_blank">{{ _('Naziozeno') }}</a> &amp;
+            <a href="https://site.adiplix.com.br/" target="_blank">{{ _('Adiplix') }}</a> {{ _('por uma web melhor') }}.
         </div>
     </div>
 </footer>

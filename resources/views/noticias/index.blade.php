@@ -13,20 +13,19 @@
         </div>
 
         <div class="col text-right">
-            <a href="{{ route('noticias.create') }}" class="btn btn-primary">
-                + Nova notícia
+            <a href="{{ route('noticias.create') }}" class="btn btn-info btn-round">
+                <i class="tim-icons icon-simple-add"></i>
+                Nova notícia
             </a>
         </div>
     </div>
 
-    {{-- Mensagem de sucesso --}}
     @if (session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
 
-    {{-- Pesquisa --}}
     <div class="card mb-4">
         <div class="card-body">
             <form method="GET" action="{{ route('noticias.index') }}">
@@ -57,7 +56,6 @@
                 <thead class="thead-light">
                     <tr>
                         <th>Título</th>
-                        <th>Status</th>
                         <th>Criado em</th>
                         <th class="text-right">Ações</th>
                     </tr>
@@ -68,14 +66,7 @@
                         <tr>
                             <td>{{ $noticia->title }}</td>
 
-                            <td>
-                                @if($noticia->status === 'published')
-                                    <span class="badge badge-success">Publicado</span>
-                                @else
-                                    <span class="badge badge-warning">Rascunho</span>
-                                @endif
-                            </td>
-
+                            
                             <td>{{ $noticia->created_at->format('d/m/Y') }}</td>
 
                             <td class="text-right">
