@@ -90,4 +90,11 @@ class NoticiasController extends Controller
             ->route('noticias.index')
             ->with('success', 'Notícia excluída com sucesso!');
     }
+
+    public function feed()
+    {
+        $noticias = \App\Models\Noticias::latest()->get();
+
+        return view('feed.index', compact('noticias'));
+    }
 }

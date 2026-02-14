@@ -10,7 +10,7 @@
                 <div class="description">
                     <h3 class="info-title">{{ _('Marketing') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                        {{ _('Criamos a campanha de marketing do site. Foi uma colaboração muito interessante.') }}
                     </p>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="description">
                     <h3 class="info-title">{{ _('Fully Coded in HTML5') }}</h3>
                     <p class="description">
-                        {{ _('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                        {{ _('Desenvolvemos o site com HTML5 e CSS3. O cliente tem acesso ao código através do GitHub.') }}
                     </p>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="description">
                     <h3 class="info-title">{{ _('Built Audience') }}</h3>
                     <p class="description">
-                        {{ _('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                        {{ _('Este produto também inclui um painel de administração CMS totalmente personalizável.') }}
                     </p>
                 </div>
             </div>

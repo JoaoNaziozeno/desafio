@@ -21,3 +21,5 @@ Route::middleware('auth')->group(function () {
 
 	Route::resource('noticias', NoticiasController::class);
 });
+
+Route::get('/feed', [NoticiasController::class, 'feed'])->name('noticias.feed');

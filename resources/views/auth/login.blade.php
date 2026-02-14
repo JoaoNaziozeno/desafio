@@ -10,33 +10,45 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input 
-                                type="email" 
-                                name="email" 
-                                class="form-control"
-                                required
-                            >
+                    @if($errors->any())
+                        <div class ="alert alert-danger">
+                            {{ $errors->first() }}
                         </div>
+                    @endif
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
 
-                        <div class="form-group">
-                            <label>Senha</label>
-                            <input 
-                                type="password" 
-                                name="password" 
-                                class="form-control"
-                                required
-                            >
-                        </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="form-control"
+                                    required
+                                >
+                            </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Entrar
-                        </button>
-                    </form>
+                            <div class="form-group">
+                                <label>Senha</label>
+                                <input 
+                                    type="password" 
+                                    name="password" 
+                                    class="form-control"
+                                    required
+                                >
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Entrar
+                            </button>
+                            @if (Route::has('password.request'))
+                                <div class="text-end">
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        Esqueci minha senha
+                                    </a>
+                                </div>
+                            @endif
+                        </form>
                 </div>
             </div>
         </div>
