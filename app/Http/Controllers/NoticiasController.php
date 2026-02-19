@@ -42,7 +42,7 @@ class NoticiasController extends Controller
         Noticias::create([
             'title' => $request->title,
             'content' => $request->content,
-            'user_id' => Auth::id() //auth()->user()->id,
+            'user_id' => auth()->id() //auth()->user()->id,
         ]);
 
         return redirect()
@@ -57,22 +57,24 @@ class NoticiasController extends Controller
     }
 
     
-    public function edit(Noticias $noticias)
+    public function edit(Noticias $noticia)
     {
-        $this->authorize('update', $noticias);
+        $this->authorize('update', $noticia);
 
-        return view('noticias.edit', compact('noticias'));
+        return view('noticias.edit', compact('noticia'));
     }
 
 
-    public function update(Request $request, Noticias $noticias)
+    public function update(Request $request, Noticias $noticia)
     {
-        $this->authorize('update', $noticias);
+        $this->authorize('update', $noticia);
 
         $request->validate([
-            'title' => 'required|string|max255',
+            'title' => 'required|string|max:255',
             'content' => 'required|string',
         ]);
+
+        $noticia->update($request->all());
 
         return redirect()
             ->route('noticias.index')
@@ -80,11 +82,11 @@ class NoticiasController extends Controller
     }
 
    
-    public function destroy(Noticias $noticias)
+    public function destroy(Noticias $noticia)
     {
-        $this->authorize('delete', $noticias);
+        $this->authorize('delete', $noticia);
 
-        $noticias->delete();
+        $noticia->delete();
 
         return redirect()
             ->route('noticias.index')

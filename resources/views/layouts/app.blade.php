@@ -93,7 +93,7 @@
         <script src="{{ asset('white') }}/js/white-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('white') }}/js/theme.js"></script>
 
-        @stack('js')
+        
 
         <script>
             $(document).ready(function() {

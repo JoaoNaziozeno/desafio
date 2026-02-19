@@ -51,7 +51,8 @@
                                 required
                             >{{ old('content') }}</textarea>
                         </div>
-
+                        
+                        <!--
                         <div class="form-group">
                             <label for="status">Status da publicação</label>
                             <select name="status" id="status" class="form-control">
@@ -59,6 +60,7 @@
                                 <option value="published">Publicado</option>
                             </select>
                         </div>
+                        -->
 
                         <div class="d-flex justify-content-between">
                             <a href="{{ route('noticias.index') }}" class="btn btn-secondary">
