@@ -53,7 +53,7 @@ class NoticiasController extends Controller
     
     public function show(Noticias $noticia)
     {
-        return view('noticias.index', compact('noticia'));
+        return view('feed.show', compact('noticia'));
     }
 
     
@@ -95,8 +95,10 @@ class NoticiasController extends Controller
 
     public function feed()
     {
-        $noticias = \App\Models\Noticias::latest()->get();
+        $noticiaPrincipal = Noticias::latest()->first();
 
-        return view('feed.index', compact('noticias'));
+        $outrasNoticias = Noticias::latest()->where('id', '!=', optional($noticiaPrincipal)->id)->take(6)->get();
+    
+        return view('feed.index', compact('noticiaPrincipal', 'outrasNoticias'));
     }
 }

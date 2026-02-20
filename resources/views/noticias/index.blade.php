@@ -3,7 +3,6 @@
 @section('content')
 <div class="container-fluid mt--7">
 
-    {{-- Cabeçalho --}}
     <div class="row mb-4">
         <div class="col">
             <h2 class="mb-0">Minhas Notícias</h2>
@@ -49,7 +48,6 @@
         </div>
     </div>
 
-    {{-- Tabela --}}
     <div class="card shadow">
         <div class="card-body p-0">
             <table class="table table-hover mb-0">
@@ -108,7 +106,6 @@
         </div>
     </div>
 
-    {{-- Paginação --}}
     <div class="mt-3">
         {{ $noticias->links() }}
     </div>
