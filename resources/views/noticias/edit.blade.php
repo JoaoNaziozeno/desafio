@@ -46,7 +46,6 @@
                             <textarea 
                                 name="content"
                                 id="content"
-                                rows="6"
                                 class="form-control"
                                 placeholder="Escreva o conteúdo da notícia"
                                 required
@@ -79,4 +78,23 @@
         </div>
     </div>
 </div>
+
+@push('js')
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("content");
+
+    function autoResize() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    }
+
+    textarea.addEventListener("input", autoResize);
+
+    // Ajusta caso já venha com texto (ex: edição)
+    autoResize.call(textarea);
+});
+</script>
+@endpush
+
 @endsection

@@ -29,12 +29,25 @@
                 ← Voltar
             </a>
 
-            @auth
+            @can('update', $noticia)
                 <a href="{{ route('noticias.edit', $noticia->id) }}" 
                    class="btn btn-primary">
                     Editar
                 </a>
-            @endauth
+            @endcan
+
+            @can('delete', $noticia)
+                <form action="{{ route('noticias.destroy', $noticia->id) }}" 
+                      method="POST" 
+                      class="d-inline"
+                      onsubmit="return confirm('Tem certeza que deseja excluir esta notícia?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        Excluir
+                    </button>
+                </form>                
+            @endcan
         </div>
 
     </div>

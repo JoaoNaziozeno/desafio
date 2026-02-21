@@ -45,23 +45,11 @@
                             <textarea 
                                 name="content"
                                 id="content"
-                                rows="6"
-                                class="form-control"
-                                placeholder="Escreva o conteúdo da notícia"
+                                class="form-control"                                placeholder="Escreva o conteúdo da notícia"
                                 required
                             >{{ old('content') }}</textarea>
                         </div>
                         
-                        <!--
-                        <div class="form-group">
-                            <label for="status">Status da publicação</label>
-                            <select name="status" id="status" class="form-control">
-                                <option value="draft">Rascunho</option>
-                                <option value="published">Publicado</option>
-                            </select>
-                        </div>
-                        -->
-
                         <div class="d-flex justify-content-between">
                             <a href="{{ route('noticias.index') }}" class="btn btn-secondary">
                                 Voltar
@@ -79,4 +67,23 @@
         </div>
     </div>
 </div>
+
+@push('js')
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.getElementById("content");
+
+    function autoResize() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    }
+
+    textarea.addEventListener("input", autoResize);
+
+    // Ajusta caso já venha com texto (ex: edição)
+    autoResize.call(textarea);
+});
+</script>
+@endpush
+
 @endsection
