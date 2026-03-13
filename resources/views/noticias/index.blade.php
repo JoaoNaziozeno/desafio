@@ -24,7 +24,7 @@
             {{ session('success') }}
         </div>
     @endif
-
+    <!--
     <div class="card mb-4">
         <div class="card-body">
             <form method="GET" action="{{ route('noticias.index') }}">
@@ -47,6 +47,7 @@
             </form>
         </div>
     </div>
+    -->
 
     <div class="card shadow">
         <div class="card-body p-0">
@@ -61,11 +62,11 @@
                 <tbody>
 
                     @forelse ($noticias as $noticia)
-                        <tr>
-                            <td>{{ $noticia->title }}</td>
-
+                        <tr onclick="window.location='{{ route('noticias.show', $noticia->id) }}'" style="cursor: pointer;">
                             
-                            <td>{{ $noticia->created_at->format('d/m/Y') }}</td>
+                            <td><a href="{{ route('noticias.show', $noticia->id) }}">{{ $noticia->title }}</a></td>
+
+                            <td>{{ $noticia->created_at->format('d/m/Y H:i') }}</td>
 
                             <td class="text-right">
                                 <a 

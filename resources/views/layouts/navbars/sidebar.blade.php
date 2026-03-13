@@ -9,23 +9,23 @@
             <li class="{{ (($pageSlug ?? '') === 'home') ? 'active' : '' }}">
                 <a href="{{ route('home') }}">
                     <i class="tim-icons icon-chart-pie-36"></i>
-                    <p>Dashboard</p>
+                    <p>Todas Notícias</p>
                 </a>
             </li>
             
             <li class="{{ (($pageSlug ?? '') === 'noticias.index') ? 'active' : '' }}">
                 <a href="{{ route('noticias.index') }}">
                     <i class="tim-icons icon-paper"></i>
-                    <p>Notícias</p>
+                    <p>Minhas Notícias</p>
                 </a>
             </li>
-            
-            <li class="{{ (($pageSlug ?? '') === 'profile.edit') ? 'active' : '' }}">
-                <a href="{{ route('profile.edit') }}">
+
+            <li class="{{ (($pageSlug ?? '') === 'users.index') ? 'active' : '' }}">
+                <a href="{{ route('users.index') }}">
                     <i class="tim-icons icon-single-02"></i>
-                    <p>User Profile</p>
+                    <p>Perfis de Usuários</p>
                 </a>
             </li>
-        </ul>
+            </ul>
     </div>
 </div>

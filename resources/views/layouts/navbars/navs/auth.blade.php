@@ -75,12 +75,24 @@
 <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="{{ __('SEARCH') }}">
-                <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('Close') }}">
-                    <i class="tim-icons icon-simple-remove"></i>
-              </button>
-            </div>
+                
+            <form method="GET" action="{{ route('noticias.index') }}">
+
+                <div class="modal-header">
+                    <input 
+                        type="text"
+                        name="search"
+                        class="form-control"
+                        id="inlineFormInputGroup"
+                        placeholder="{{ __('Busque sua notícia') }}"
+                        auto-focus
+                        >
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

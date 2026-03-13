@@ -67,6 +67,7 @@
                     <div class="clearfix"></div>
                     </a>
                 </li>
+                <!--
                 <li class="button-container">
                     <a href="https://www.creative-tim.com/product/white-dashboard-laravel" target="_blank" class="btn btn-primary btn-block btn-round">Download Now</a>
                     <a href="https://white-dashboard-laravel.creative-tim.com/docs/getting-started/laravel-setup.html" target="_blank" class="btn btn-default btn-block btn-round">
@@ -80,7 +81,7 @@
                     <br>
                     <br>
                     <a class="github-button" href="https://github.com/creativetimofficial/white-dashboard-laravel" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-                </li>
+                </li>-->
                 </ul>
             </div>
         </div>

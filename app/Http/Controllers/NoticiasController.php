@@ -42,7 +42,7 @@ class NoticiasController extends Controller
         Noticias::create([
             'title' => $request->title,
             'content' => $request->content,
-            'user_id' => auth()->id() //auth()->user()->id,
+            'user_id' => auth()->id, //auth()->user()->id,
         ]);
 
         return redirect()
