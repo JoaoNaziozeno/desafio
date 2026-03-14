@@ -12,7 +12,7 @@
         </div>
 
         <div class="col text-right">
-            <a href="{{ route('passwords.register') }}" class="btn btn-info btn-round">
+            <a href="{{ route('auth.register') }}" class="btn btn-info btn-round">
                 <i class="tim-icons icon-simple-add"></i>
                 Novo usuário
             </a>
@@ -63,7 +63,7 @@
                         <td class="text-right">
 
                             <a 
-                                href="{{ route('users.edit', $user->id) }}"
+                                href="{{ route('profile.edit', $user->id) }}"
                                 class="btn btn-sm btn-primary"
                             >
                                 Editar

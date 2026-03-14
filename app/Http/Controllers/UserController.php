@@ -22,7 +22,14 @@ class UserController extends Controller
 
     public function register()
     {
-        return view('passwords.register');
+        return view('auth.register');
+    }
+
+    public function edit(User $user)
+    {
+        $this->authorize('update', $user);
+
+        return view('profile.edit', compact('user'));
     }
 
     public function store(UserRequest $request)

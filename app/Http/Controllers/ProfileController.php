@@ -28,7 +28,7 @@ class ProfileController extends Controller
     {
         auth()->user->update($request->all());
 
-        return back()->withStatus(__('Profile successfully updated.'));
+        return back()->withStatus(__('Usuário atualizado com sucesso.'));
     }
 
     /**
@@ -41,14 +41,14 @@ class ProfileController extends Controller
     {
         auth()->user->update(['password' => Hash::make($request->get('password'))]);
 
-        return back()->withPasswordStatus(__('Password successfully updated.'));
+        return back()->withPasswordStatus(__('Senha atualizada com sucesso.'));
     }
 
     public function destroy()
     {
         auth()->user->delete();
 
-        return redirect('/')->withStatus(__('Profile successfully deleted.'));
+        return redirect('/')->withStatus(__('Usuário excluído com sucesso.'));
     }
 
     public function index()
@@ -58,6 +58,6 @@ class ProfileController extends Controller
 
     public function register()
     {
-        return view('passwords.register');
+        return view('auth.register');
     }
 }
